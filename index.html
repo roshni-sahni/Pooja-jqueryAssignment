@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Jquery</title>
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<script>
+		$(document).ready(function(){
+			var i=0;
+			setInterval(show, 3000);
+			function show() {
+				i=i-400;
+				if (i<-1300) {
+					i=0;
+					$('.inner').animate({"margin-top":i},300);
+				}
+				else{
+					$('.inner').animate({"margin-top":i},300);
+				}
+			}
+			$(".homebtn1").click(function() {
+				$('.content1').animate({"left":"-80%"},550, function () {
+					$('.ads1').animate({"margin-top":"-90%"},550,function() {
+						$('.btn2,.btn3,.btn4').animate({"margin-left":"0px"},550,
+							function() {
+							location.reload();
+						});
+					});
+				});    
+				
+			})
+			$(".homebtn2").click(function() {
+				$('.content2').animate({"left":"-80%"},550, function () {
+					$('.ads2').animate({"margin-top":"-90%"},550,function() {
+						$('.btn1,.btn2,.btn3,.btn4').animate({"margin-left":"0px"},550,
+							function() {
+							location.reload();
+						});
+					});
+				});    
+				
+			})
+			$(".homebtn3").click(function() {
+				$('.content3').animate({"left":"-80%"},550, function () {
+					$('.ads3').animate({"margin-top":"-90%"},550,function() {
+						$('.btn1,.btn2,.btn3,.btn4').animate({"margin-left":"0px"},550,
+							function() {
+							location.reload();
+						});
+					});
+				});    
+				
+			})
+			$(".homebtn4").click(function() {
+				$('.content4').animate({"left":"-80%"},550, function () {
+					$('.ads4').animate({"margin-top":"-90%"},550,function() {
+						$('.btn1,.btn2,.btn3,.btn4').animate({"margin-left":"0px"},550,
+							function() {
+							location.reload();
+						});
+					});
+				}); 
+			
+			})
+			// -----about-us---
+			$(".btn1").hover(function(){
+				$('.ads1 h2').animate({"margin-top":"0px"},600)
+			    $('.ads1').animate({"top":"10%"},600).click(function() {
+			    	$(this).data('clicked', true);
+			    	$('.btn2,.btn3,.btn4').animate({"margin-left":"-1200px"},600); 
+			    	$('.content1').css({"display":"block"}).animate({"left":"240px"},600)
+			    }).hover(function() {
+			    },function () {
+			    	if($('.ads1').data('clicked')) {
+					   $('.ads1,.content').css("display", "block");
+					}else{
+						$('.ads1 h2').animate({"margin-top":"1200px"})
+						$('.ads1').animate({"top":"-80%",})
+						
+					}
+			    	$('.btn2,.btn3,.btn4').show(1000);
+			    });
+			});
+			// ---partneers--
+			$(".btn2").hover(function(){
+				$('.ads2 h2').animate({"margin-top":"0px"})
+			    $('.ads2').animate({"top":"10%",}).click(function() {
+			    	$(this).data('clicked', true);
+			    	$('.ads2').animate({"margin-left":"-290px"},600,function() {
+			    		$('.btn1,.btn2,.btn3,.btn4').animate({"margin-left":"-1200px"}
+			    			,600,function() {
+			    			$('.content2').css({"display":"block"})
+			    			.animate({"left":"230px"},600)
+			    		});
+			    	});			    	
+			    	$('.memberbtn').click(function() {
+			    		$('.backbtn2 ').css({"display":"inline-block"})
+			    		$('.member').css({"display":"block"}).animate({"margin-left":"0"},600,function () {
+			    			$('.backbtn2').click(function() {
+			    			$('.member').animate({"margin-left":"600"},600,function () {
+			    				$('.backbtn2 ').css({"display":"none"})
+			    			})
+			    		})
+			    		})
+			    	})
+			    }).hover(function() {
+			    },function () {
+			    	if($('.ads2').data('clicked')) {
+					   $('.ads2,.content').css("display", "block");
+					}else{
+						$('.ads2 h2').animate({"margin-top":"1200px"},50,function() {
+						$('.ads2').animate({"top":"-80%"})
+						})
+					}			    	
+			    	$('.btn2,.btn3,.btn4').show(1000);
+			    });
+			});
+			// ---diffrentiations--
+
+			$(".btn3").hover(function(){
+				$('.ads3 h2').animate({"margin-top":"0px"})
+			    $('.ads3').animate({"top":"10%",}).click(function() {
+			    	$(this).data('clicked', true);
+			    	$('.ads3').animate({"margin-left":"-570px"},600,function() {
+			    		$('.btn1,.btn2,.btn3,.btn4').animate({"margin-left":"-1200px"},
+			    			600,function() {
+			    			$('.content3').css({"display":"block"}).animate({"left":"230px"},600)
+			    			}); 
+			    	});
+			    	
+			    	
+			    }).hover(function() {
+			    },function () {
+			    	if($('.ads3').data('clicked')) {
+					   $('.ads3,.content').css("display", "block");
+					}else{
+						$('.ads3 h2').animate({"margin-top":"1200px"},50,function() {
+						$('.ads3').animate({"top":"-80%"})
+						})
+					}			    	
+			    	$('.btn2,.btn3,.btn4').show(1000);
+			    });
+			});
+
+			// ----service----
+
+			$(".btn4").hover(function(){
+				$('.ads4 h2').animate({"margin-top":"0px"})
+			    $('.ads4').animate({"top":"10%",}).click(function() {
+			    	$(this).data('clicked', true);
+			    	$('.ads4').animate({"margin-left":"-860px"},600,function() {
+			    		$('.btn1,.btn2,.btn3,.btn4').animate({"margin-left":"-1200px"},600,
+			    			function() {
+			    			$('.content4').css({"display":"block"}).animate({"left":"230px"},600)
+			    		}); 
+			    	});
+			    	
+			    }).hover(function() {
+			    },function () {
+			    	if($('.ads4').data('clicked')) {
+					   $('.ads4,.content').css("display", "block");
+					}else{
+						$('.ads4').animate({"top":"-80%"},600)
+					}			    	
+			    	$('.btn2,.btn3,.btn4').show(1000);
+			    });
+			});
+
+			// ---services---
+
+			$(".box1").click(function(){
+				$('.backbtn4 ').css({"display":"inline-block"})
+				$('.assurance').css({"display":"block"}).animate({"margin-left":"0"},1000)
+				$('.backbtn4').click(function() {
+					$('.assurance').animate({"margin-left":"600px"},1000,
+						function () {
+						$('.assurance, .backbtn4').css({"display":"none"},function() {
+							$('.backbtn4').css({"display":"none"})
+						})
+					})
+				})
+			});
+			$(".box2").click(function(){
+				$('.backbtn4 ').css({"display":"inline-block"})
+				$('.tax').css({"display":"block"}).animate({"margin-left":"0"},1000)
+				$('.backbtn4').click(
+					function() {
+					$('.tax').animate({"margin-left":"600px"},1000,function () {
+						$('.tax,.backbtn4').css({"display":"none"})
+					})
+				})
+			});
+			$(".box3").click(function(){
+				$('.backbtn4 ').css({"display":"inline-block"})
+				$('.law').css({"display":"block"}).animate({"margin-left":"0"},1000)
+				$('.backbtn4').click(function() {
+					$('.law').animate({"margin-left":"600px"},1000,function () {
+						$('.law,.backbtn4').css({"display":"none"})
+					})
+				})
+			});
+			$(".box4").click(function(){
+				$('.backbtn4 ').css({"display":"inline-block"})
+				$('.financial').css({"display":"block"}).animate({"margin-left":"0"},1000)
+				$('.backbtn4').click(function() {
+					$('.financial').animate({"margin-left":"600px"},1000,function () {
+						$('.financial,.backbtn4').css({"display":"none"})
+					})
+				})
+			});
+			$(".box5").click(function(){
+				$('.backbtn4 ').css({"display":"inline-block"})
+				$('.Outsourcing').css({"display":"block"}).animate({"margin-left":"0"},1000)
+				$('.backbtn4').click(function() {
+					$('.Outsourcing').animate({"margin-left":"600px"},1000,function () {
+						$('.Outsourcing,.backbtn4').css({"display":"none"})
+					})
+				})
+			});
+
+		});
+	</script>
+</head>
+<body>
+<div class="container-fluid  bg-light">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <p>D.V.MITTAL & CO.<br><span>CHARTERED ACCOUNTANTS</span><p> 
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav ml-auto">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="#">CAREERS</a>
+		      </li>
+		       <li class="nav-item active">
+		        <a class="nav-link" href="#">CONTACT</a>
+		      </li>
+		       <li class="nav-item active">
+		        <a class="nav-link" href="#">ALUMNI </a>
+		      </li>
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		     
+		      <button class="btn btn-dark my-2 my-sm-0" type="submit">Login</button>
+		    </form>
+		  </div>
+		</nav>
+	</div>
+</div>
+<div class="container">
+	<div class="row" style="height: 90vh; overflow: hidden;">
+		<div class="col-md-9 right px-0">
+			<div class="content1">
+				 <div class="d-flex justify-content-between   py-2">
+				 	<h1>title</h1>
+				 	<div class="home">
+				 	<input type="button" class="homebtn1" value="home">
+				 	</div>
+				 </div>
+				 <hr style="background-color: white; margin: 0;">
+				 <div class="bodytext p-4">
+				 	<h2>About us</h2>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 </div>
+				
+			</div>
+			<div class="content2">
+				 <div class="d-flex justify-content-between px-4 py-2">
+				 	<h1>title</h1>
+				 	<div class="home">
+				 		<input type="button" class="backbtn2" value="<<back">
+				 		<input type="button" class="homebtn2" value="<<home">
+				 	</div>
+				 </div>
+				 <hr style="background-color: white; margin: 0;">
+				 <div class="bodytext p-4">
+				 	<!-- <h2>partners</h2> -->
+				 	<div class="d-flex">
+				 	<input type="button" class="memberbtn btn btn-dark mx-2" value="partners">
+				 	<input type="button" class="memberbtn btn btn-dark mx-2" value="memebers">
+				 	</div>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<div class="member px-4 py-2">
+				 		<h1>MEMBERS</h1>
+				 		<img src="img/manager.jpg" width="200px">
+				 		<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	
+				 	</div>	
+				 </div>
+
+			</div>
+			<div class="content3">
+				 <div class="d-flex justify-content-between px-4 py-2">
+				 	<h1>title</h1>
+				 	<div class="home">
+				 	<input type="button" class="homebtn3" value="home">
+				 	</div>
+				 </div>
+				 <hr style="background-color: white; margin: 0;">
+				 <div class="bodytext p-4">
+				 	<h2>Differbtiations</h2>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 </div>
+			</div>
+			<div class="content4">
+				 <div class="d-flex justify-content-between px-4 py-2">
+				 	<h1>title</h1>
+				 	<div class="home">
+				 	<input type="button" class="backbtn4" value="<<back">
+				 	<input type="button" class="homebtn4" value="home">
+				 	</div>
+				 </div>
+				 <hr style="background-color: white; margin: 0;">
+				 <div class="bodytext p-4">
+				 	<h2>Services</h2>
+				 	<div class="row">
+				 		<div class="col-md-3 box box1">				 			
+				 			<img src="img/box1.jpg">
+				 			<h2>Assurance</h2>
+				 		</div>
+				 		<div class="col-md-3 box box2">
+				 			<img src="img/box2.jpg">
+				 			<h2>tax</h2>
+				 		</div>
+				 		<div class="col-md-3 box box3">
+				 			<img src="img/box3.jpg">
+				 			<h2>Law</h2>
+				 		</div>
+				 		<div class="col-md-3 box box4">
+				 			<img src="img/box4.jpg">
+				 			<h2>financial</h2>
+				 		</div>
+				 		<div class="col-md-3 box box5">
+				 			<img src="img/box5.jpg">
+				 			<h2>Outsourcing</h2>
+				 		</div>
+				 	</div>
+				 	<div class="assurance">
+				 		<img src="img/box1.jpg">
+				 		<h1>AUDITING & ASSURANCE</h1>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	</div>
+				 	<div class="tax">
+				 		<h1>Tax</h1>
+				 		<img src="img/box2.jpg" height="300px">
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	</div>
+				 	<div class="law">
+				 		<h1>Law</h1>
+				 		<img src="img/box3.jpg">
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	</div>
+				 	<div class="financial">
+				 		<h1>financial</h1>
+				 		<img src="img/box4.jpg" height="300px">
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	</div>
+				 	<div class="Outsourcing">
+				 		<h1>Outsourcing</h1>
+				 		<img src="img/box5.jpg">
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+					 	<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+				 	</div>
+				 </div>
+			</div>
+			<div>
+				<input type="button" value="ABOUT US" class="btn btn-dark btn1 ">
+				<div class="ads ads1">
+					<img src="img/1.jpg">
+					<h2>ABOUT US <br><span>WHO ARE WE</span></h2>
+				</div>
+			</div>
+			<div >
+				<input type="button" value="PARTNERS" class="btn btn-dark btn2">
+				<div class="ads ads2">
+					<img src="img/2.jpg">
+					<h2>PARTNERS <br><span>AND ASSOCIATES</span></h2>
+				</div>
+			</div>
+			<div>
+				<input type="button" value="DIFFERNTIATIONS" class="btn btn-dark btn3">
+				<div class="ads ads3">
+					<img src="img/3.jpg">
+					<h2>DIFFERNTIATIONS <br><span>OUR STRENGTH</span></h2>
+				</div>
+			</div>
+			<div>
+				<input type="button" value="SERVICES" class="btn btn-dark btn4">
+				<div class="ads ads4">
+					<img src="img/4.jpg">
+					<h2>SERVICES <br><span>WHAT WE DELIVER</span></h2>
+				</div>
+			</div>
+			
+			
+		</div>
+		<div class="col-md-3 left p-2">
+			<div class="bg-light px-3 py-5">
+		<div class="main">
+			<div class="inner">
+				<img src="img/1.jpg" class="img1">
+				<img src="img/2.jpg" class="img2">
+				<img src="img/3.jpg" class="img3">
+				<img src="img/4.jpg" class="img4">
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+  background-image: url("img/bg.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.navbar p{
+/*    color: red;*/
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 23px;
+    padding-top: 13px;
+}
+.navbar p span{
+    font-size: 17px;
+}
+li{
+    color: red;
+    margin-right: 10px;
+}
+.btn{
+    font-size: 15px;
+    padding: 6px 24px;
+    width: 170px;
+}
+.right{
+/*    height:100vh;*/
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between;
+    overflow: hidden;
+}
+.left{
+/*    height:100vh;*/
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+/*    background: teal;*/
+}
+.main{
+    height: 400px;
+    width: 200px;
+    overflow: hidden;
+    margin: 10px;
+    background: black;
+}
+.inner{
+    height: 10000px;
+}
+.main img{
+    height: 400px;
+    width: 200px;
+}
+.ads{
+    height: 550px;
+    width: 200px;
+    color: white;
+    background: red;
+    position: absolute;
+    top: -80%;
+
+}
+
+.ads img{
+    height: 100%;
+    width: 100%;
+}
+.ads h2{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: 1200px;
+    background: grey;
+}
+.content1,.content2,.content3,.content4{
+    height: 618px;
+    width: 610px;
+    left: -1000px;
+    top: 10%;
+    background: black;
+    color: white;
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+}
+
+.home input{
+    background: black;
+    color: white;
+    font-size: 25px;
+    padding: 10px 0px;
+    border: none;
+}
+.member{
+    height: 600px;
+    width: 595px;
+    margin-left: 600px;
+    display: none;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bodytext{
+    position: relative;
+    overflow-x: hidden;
+}
+.backbtn2{
+    display: none;
+}
+.backbtn4{
+    display: none;
+}
+.box{
+    background: black;
+    height: 180px;
+    padding: 0;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+    border: 1px solid white;
+    opacity: 0.8;
+}
+.box h1{
+    background: red;
+}
+.box img{
+    width: 100%;
+    height: 150px;
+}
+.box h2{
+    padding-top: 3px;
+    font-size: 18px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+.assurance{
+    width: 595px;
+    margin-left: 600px;
+    display: none;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+.tax{
+    width: 595px;
+    margin-left: 600px;
+    display: none;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+.law{
+    width: 595px;
+    margin-left: 600px;
+    display: none;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+.Outsourcing{
+    width: 595px;
+    margin-left: 600px;
+    display: none;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+.financial{
+    width: 595px;
+    margin-left: 600px;
+    display: none;
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+}
+.assurance img{
+    width: 100%;
+    height: 300px;
+}
+.law img{
+    width: 100%;
+    height: 300px;
+}
+.tax img{
+    width: 100%;
+    height: 300px;
+}
+.financial img{
+    width: 100%;
+    height: 300px;
+}
+.Outsourcing img{
+    width: 100%;
+    height: 300px;
+}
+/*---*/
+body::-webkit-scrollbar{
+    display: none;
+}
+::-webkit-scrollbar {
+  width: 14px;
+  border: 5px solid #989898;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: 
+  padding-box;
+  background: #989898;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #323330;
+  border-radius: 15px;
+}
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: #bbbbbb;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 20px;
+  border-width: 0 8px 15px 8px;
+  border-color: transparent transparent #989898 transparent;
+  background: #323330;
+
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 20px;
+  border-width: 15px 8px 0 8px;
+  border-color: #989898 transparent transparent transparent;
+  background: #323330;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #777777 transparent transparent transparent;
+}

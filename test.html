@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test</title>
+	<script src="script.js"></script>
+	<script>
+		$(document).ready(function(){
+			var i=0;
+			setInterval(show, 5000);
+			function show() {
+				i=i-405;
+				if (i<-1300) {
+					i=0;
+					$('.inner').animate({"margin-top":i},200);
+				}
+				else{
+					$('.inner').animate({"margin-top":i},200);
+				}
+			}
+		})
+	</script>
+</head>
+<style>
+.main{
+	height: 400px;
+	width: 250px;
+	overflow: hidden;
+	margin: 100px;
+	background: black;
+}
+.inner{
+	height: 10000px;
+}
+.main img{
+	width: 400px;
+	width: 250px;
+}
+::-webkit-scrollbar {
+  width: 16px;
+  border: 5px solid white;
+  background: #555555;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 0.05em solid teal;
+}
+
+::-webkit-scrollbar-track {
+  background-color: green;
+  border-radius: 10px;
+}
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+  background-color: #bbbbbb;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  height: 20px;
+  border-width: 0 8px 15px 8px;
+  border-color: transparent transparent #ffff transparent;
+  background: red;
+
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent #777777 transparent;
+}
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  height: 20px;
+  border-width: 15px 8px 0 8px;
+  border-color: #ffff transparent transparent transparent;
+  background: red;
+}
+
+::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: #777777 transparent transparent transparent;
+}
+</style>
+<body>
+<div class="main">
+	<div class="inner">
+		<img src="img/1.jpg" class="img1">
+		<img src="img/2.jpg" class="img2">
+		<img src="img/3.jpg" class="img3">
+		<img src="img/4.jpg" class="img4">
+	</div>
+</div>
+<div class="dummy" style="height:1500px">
+	<img src="img/Capture.PNG">
+</div>
+</body>
+</html>
